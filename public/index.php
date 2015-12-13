@@ -15,5 +15,5 @@ require __DIR__ . '/../vendor/autoload.php';
 $app = include __DIR__ . '/../bootstrap/app.php';
 
 (new Fresco\Http\Server($app))->listen(
-    Fresco\Http\RequestFactory::capture()
+    $app->captureRequest()
 );

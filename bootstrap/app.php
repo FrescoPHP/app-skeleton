@@ -1,12 +1,21 @@
 <?php
 
+/**
+ * Init application
+ */
 $app = new Fresco\Application(
     realpath(__DIR__ . '/../')
 );
 
-//$app->bind(
-//    Fresco\Contracts\Http\Request::class,
-//    Fresco\Http\Adapters\Psr7\Request::class
-//);
+/**
+ * Define components
+ */
+$app->definitions([
+    Fresco\Definitions\LaravelContainerDefinition::class,
+    Fresco\Definitions\DiactorosRequestDefinition::class
+]);
+
+// Temporary solution
+$app->bootstrap();
 
 return $app;
