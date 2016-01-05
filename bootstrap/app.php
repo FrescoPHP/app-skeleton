@@ -11,7 +11,8 @@ $app = new Fresco\Application(
  * Define components
  */
 $app->definitions([
-    Fresco\Definitions\DiactorosPsr7Definition::class,
+    Fresco\Definitions\DiactorosDefinition::class,
+    Fresco\Definitions\FastRouteDefinition::class,
     App\Definitions\ExceptionRunnerDefinition::class
 ]);
 
