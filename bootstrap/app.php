@@ -11,11 +11,7 @@ $app = new Fresco\Application(
  * Define components
  */
 $app->definitions([
-    Fresco\Definitions\LaravelContainerDefinition::class,
-    Fresco\Definitions\DiactorosRequestDefinition::class
+    Fresco\Definitions\DiactorosPsr7Definition::class
 ]);
-
-// Temporary solution
-$app->bootstrap();
 
 return $app;
