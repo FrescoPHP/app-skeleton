@@ -12,6 +12,7 @@ $app = new Fresco\Application(
  */
 $app->definitions([
     Fresco\Definitions\DiactorosDefinition::class,
+    Fresco\Definitions\LaravelConfigDefinition::class,
     Fresco\Definitions\FastRouteDefinition::class,
     Fresco\Definitions\TwigDefinition::class
 ]);
