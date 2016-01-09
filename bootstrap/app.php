@@ -11,10 +11,11 @@ $app = new Fresco\Application(
  * Define components
  */
 $app->definitions([
+    Fresco\Definitions\TwigDefinition::class,
+    Fresco\Definitions\DotEnvDefinition::class,
     Fresco\Definitions\DiactorosDefinition::class,
-    Fresco\Definitions\LaravelConfigDefinition::class,
     Fresco\Definitions\FastRouteDefinition::class,
-    Fresco\Definitions\TwigDefinition::class
+    Fresco\Definitions\LaravelConfigDefinition::class,
 ]);
 
 return $app;
