@@ -15,6 +15,7 @@ $app->definitions([
     Fresco\Definitions\DotEnvDefinition::class,
     Fresco\Definitions\DiactorosDefinition::class,
     Fresco\Definitions\FastRouteDefinition::class,
+    Fresco\Definitions\RouteBinderDefinition::class,
     Fresco\Definitions\LaravelConfigDefinition::class,
 ]);
 
