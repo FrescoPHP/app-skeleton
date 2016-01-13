@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'providers' => [
-
+    'routes' => [
+        App\Http\Routes\HomeRoute::class
     ]
 ];
