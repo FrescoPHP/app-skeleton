@@ -3,7 +3,7 @@
 /**
  * Init application
  */
-$app = new Fresco\Application(
+$app = new Mosaic\Application(
     realpath(__DIR__ . '/../')
 );
 
@@ -11,12 +11,12 @@ $app = new Fresco\Application(
  * Define components
  */
 $app->definitions([
-    Fresco\Definitions\TwigDefinition::class,
-    Fresco\Definitions\DotEnvDefinition::class,
-    Fresco\Definitions\DiactorosDefinition::class,
-    Fresco\Definitions\FastRouteDefinition::class,
-    Fresco\Definitions\RouteBinderDefinition::class,
-    Fresco\Definitions\LaravelConfigDefinition::class,
+    Mosaic\Definitions\TwigDefinition::class,
+    Mosaic\Definitions\DotEnvDefinition::class,
+    Mosaic\Definitions\DiactorosDefinition::class,
+    Mosaic\Definitions\FastRouteDefinition::class,
+    Mosaic\Definitions\RouteBinderDefinition::class,
+    Mosaic\Definitions\LaravelConfigDefinition::class,
 ]);
 
 return $app;

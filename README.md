@@ -1,1 +1,1 @@
-# Fresco app skeleton
+# Mosaic app skeleton

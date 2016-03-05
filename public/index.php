@@ -1,17 +1,17 @@
 <?php
 
 /**
- * Fresco - Framework
+ * Mosaic - Framework
  *
- * @package Fresco
+ * @package Mosaic
  * @author  Patrick Brouwers       <patrick@maatwebsite.nl>
  * @author  Guido Contreras Woda   <guiwoda@gmail.com>
  */
 
-define('FRESCO_START', microtime(true));
+define('MOSAIC_START', microtime(true));
 
 require __DIR__ . '/../vendor/autoload.php';
 
 $app = include __DIR__ . '/../bootstrap/app.php';
 
-(new Fresco\Http\Server($app))->listen();
+(new Mosaic\Http\Server($app))->listen();

@@ -2,8 +2,8 @@
 
 namespace App\Http\Routes;
 
-use Fresco\Contracts\Routing\RouteBinder;
-use Fresco\Contracts\Routing\Router;
+use Mosaic\Contracts\Routing\RouteBinder;
+use Mosaic\Contracts\Routing\Router;
 
 class HomeRoute implements RouteBinder
 {

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Fresco\Contracts\View\Factory;
+use Mosaic\Contracts\View\Factory;
 
 class HomeController
 {
