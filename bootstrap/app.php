@@ -3,20 +3,15 @@
 /**
  * Init application
  */
-$app = new Mosaic\Application(
+
+$app = new Mosaic\Cement\Application;
+
+$folderStructure = new Mosaic\Common\Conventions\DefaultFolderStructure(
     realpath(__DIR__ . '/../')
 );
 
-/**
- * Define components
- */
-$app->definitions([
-    Mosaic\Definitions\TwigDefinition::class,
-    Mosaic\Definitions\DotEnvDefinition::class,
-    Mosaic\Definitions\DiactorosDefinition::class,
-    Mosaic\Definitions\FastRouteDefinition::class,
-    Mosaic\Definitions\RouteBinderDefinition::class,
-    Mosaic\Definitions\LaravelConfigDefinition::class,
+$app->components([
+    Mosaic\View\Component::twig($folderStructure)
 ]);
 
 return $app;
