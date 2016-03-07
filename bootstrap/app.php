@@ -11,6 +11,7 @@ $folderStructure = new Mosaic\Common\Conventions\DefaultFolderStructure(
 );
 
 $app->components([
+    Mosaic\Exceptions\Component::whoops(),
     Mosaic\View\Component::twig($folderStructure)
 ]);
 
