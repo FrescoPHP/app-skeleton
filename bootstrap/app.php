@@ -10,9 +10,9 @@ $folderStructure = new Mosaic\Common\Conventions\DefaultFolderStructure(
     realpath(__DIR__ . '/../')
 );
 
-$app->components([
+$app->components(
     Mosaic\Exceptions\Component::whoops(),
     Mosaic\View\Component::twig($folderStructure)
-]);
+);
 
 return $app;
