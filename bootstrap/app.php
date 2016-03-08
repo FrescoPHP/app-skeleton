@@ -12,8 +12,11 @@ $folderStructure = new Mosaic\Common\Conventions\DefaultFolderStructure(
 
 $app->components(
     Mosaic\Http\Component::diactoros(),
+    Mosaic\Routing\Component::fastRoute(),
     Mosaic\Exceptions\Component::whoops(),
     Mosaic\View\Component::twig($folderStructure)
 );
+
+$app->bootstrap();
 
 return $app;

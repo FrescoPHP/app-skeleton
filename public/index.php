@@ -14,4 +14,7 @@ require __DIR__ . '/../vendor/autoload.php';
 
 $app = include __DIR__ . '/../bootstrap/app.php';
 
-(new Mosaic\Http\Server($app))->listen();
+(new Mosaic\Http\WebServer(
+    $app->captureRequest(),
+    $app->getContainer()
+))->listen();
