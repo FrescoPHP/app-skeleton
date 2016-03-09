@@ -11,7 +11,7 @@ $app = new Mosaic\Cement\Application(
 $app->components(
     Mosaic\Exceptions\Component::whoops(),
     Mosaic\Http\Component::diactoros(),
-    Mosaic\Routing\Component::fastRoute()->bind(
+    Mosaic\Routing\Component::fastRoute()->binders(
         new App\Http\Routes\HomeRoute
     ),
     Mosaic\View\Component::twig($app->getFolderStructure())
