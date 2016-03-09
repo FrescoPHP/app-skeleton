@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Mosaic\Contracts\View\Factory;
+use Mosaic\View\Factory;
 
 class HomeController
 {
