@@ -4,19 +4,17 @@
  * Init application
  */
 
-$app = new Mosaic\Cement\Application;
-
-$folderStructure = new Mosaic\Common\Conventions\DefaultFolderStructure(
+$app = new Mosaic\Cement\Application(
     realpath(__DIR__ . '/../')
 );
 
 $app->components(
-    Mosaic\Http\Component::diactoros(),
-    Mosaic\Routing\Component::fastRoute(),
     Mosaic\Exceptions\Component::whoops(),
-    Mosaic\View\Component::twig($folderStructure)
+    Mosaic\Http\Component::diactoros(),
+    Mosaic\Routing\Component::fastRoute()->bind(
+        new App\Http\Routes\HomeRoute
+    ),
+    Mosaic\View\Component::twig($app->getFolderStructure())
 );
-
-$app->bootstrap();
 
 return $app;
