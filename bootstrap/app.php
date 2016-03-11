@@ -16,7 +16,8 @@ $app->components(
     Mosaic\Routing\Component::fastRoute()->binders(
         new App\Http\Routes\HomeRoute
     ),
-    Mosaic\View\Component::twig($app->getFolderStructure())
+    Mosaic\View\Component::twig($app->getFolderStructure()),
+    Mosaic\Filesystem\Component::flystem($app->getFolderStructure())
 );
 
 return $app;
