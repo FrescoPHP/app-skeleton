@@ -13,6 +13,7 @@ $app->components(
         new Whoops\Handler\PrettyPageHandler
     ),
     Mosaic\Http\Component::diactoros(),
+    Mosaic\Cache\Component::psr6()->array(),
     Mosaic\Routing\Component::fastRoute()->binders(
         new App\Http\Routes\HomeRoute
     ),
